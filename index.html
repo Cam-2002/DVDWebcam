@@ -18,30 +18,30 @@
 			}
 			video.style.left = "0px";
 			video.style.top = "0px";
-			var xadj = 1.0;
-			var yadj = 1.0;
+			var xadj = 8.0;
+			var yadj = 8.0;
 			var x = 0.0;
 			var y = 0.0;
 			setInterval(function(){
 				x+=xadj;
 				y+=yadj;
 				if(x > body.offsetWidth - video.offsetWidth){
-					xadj = -1.0;
+					xadj = -8.0;
 				}
 				if(y > body.offsetHeight - video.offsetHeight){
-					yadj = -1.0;
+					yadj = -8.0;
 				}
 				if(x < 0){
-					xadj = 1.0;
+					xadj = 8.0;
 				}
 				if(y < 0){
-					yadj = 1.0;
+					yadj = 8.0;
 				}
 				video.style.left = x.toString()+"px";
 				video.style.top = y.toString()+"px";
 				//console.log();
 				//console.log(toString(+1) + "px");
-			},4);
+			},32);
 		</script>
 	</body>
 </html>
